@@ -37,7 +37,7 @@
         "customer_id": 1,
         "bought_at": 1644849608,
         "store_id": 735,
-        "total": "2",
+        "total": "2.22",
         "items": [
             {"product_id": 1, "price": "10", "quantity": 10, "name": "natura cos tam xDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"},
             {"product_id": 2, "price": "20", "quantity": 20, "name": "natura cos tam xDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"},

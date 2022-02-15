@@ -1,8 +1,9 @@
 import json
+import time
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
-
+# object.ttlattribute = 1641600 + int(time.time())
 
 def create_table_if_not_exists():
     """Create dynamodb table if not exists."""
@@ -53,7 +54,7 @@ for recipt in data:
             'items': [product for product in recipt['items']],
             'total': recipt['total'],
             'store_id': recipt['store_id']
-        }
+        },       
     )
     print("Insert product response:", resp)
 

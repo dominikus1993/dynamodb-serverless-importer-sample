@@ -1,0 +1,22 @@
+service: dynamodb-data-writer
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-python-requirements
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: eu-west-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - s3:
+          bucket: test-lambda2137
+          event: s3:ObjectCreated:*
+          existing: true
+          rules:
+            - suffix: .jpg
